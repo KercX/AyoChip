@@ -1,0 +1,85 @@
+{
+  "name": "AyoChipFramework",
+  "version": "1.0.0",
+  "description": "Modern Roblox framework with custom UI, tools and modular systems.",
+  "author": "AyoChip",
+  "license": "MIT",
+
+  "framework": {
+    "ui": {
+      "enabled": true,
+      "theme": "Dark",
+      "cornerRadius": 16,
+      "stroke": true,
+      "animations": true,
+      "mobileSupport": true
+    },
+
+    "tools": {
+      "enabled": true,
+      "autoRegister": true,
+      "logging": true
+    },
+
+    "notifications": {
+      "enabled": true,
+      "duration": 4
+    },
+
+    "inventory": {
+      "enabled": true,
+      "maxSlots": 30,
+      "stackItems": true
+    },
+
+    "player": {
+      "walkSpeed": 16,
+      "jumpPower": 50
+    }
+  },
+
+  "paths": {
+    "modules": "src/ReplicatedStorage/Modules",
+    "ui": "src/StarterGui",
+    "server": "src/ServerScriptService",
+    "client": "src/StarterPlayer/StarterPlayerScripts",
+    "assets": "assets",
+    "release": "release"
+  },
+
+  "build": {
+    "windows": {
+      "enabled": true,
+      "output": "release/AyoChip-Windows.zip"
+    },
+
+    "linux": {
+      "enabled": true,
+      "output": "release/AyoChip-Linux.zip"
+    },
+
+    "macos": {
+      "enabled": true,
+      "output": "release/AyoChip-MacOS.zip"
+    },
+
+    "rbxm": {
+      "enabled": true,
+      "output": "release/AyoChip.rbxm"
+    }
+  },
+
+  "theme": {
+    "main": [20, 20, 20],
+    "accent": [0, 170, 255],
+    "text": [255, 255, 255]
+  },
+
+  "dependencies": {
+    "rojo": "7.4.4",
+    "wally": "0.3.2",
+    "topbarplus": true,
+    "fusion": false,
+    "knit": false
+  }
+}

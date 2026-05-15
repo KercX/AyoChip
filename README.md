@@ -48,10 +48,6 @@ It is designed to replace messy single-script Roblox projects with a structured 
 - Item stacking support
 - Player data storage ready
 
-## 🧲 Pickup System
-- ProximityPrompt based pickup
-- Automatic item handling
-- Server-safe structure
 
 ## 🧠 Tool Framework
 - Register custom tools
@@ -69,46 +65,7 @@ It is designed to replace messy single-script Roblox projects with a structured 
 
 ---
 
-# 📁 Project Structure
 
-```text
-AyoChip/
-│
-├── framework/
-│   ├── Core/
-│   ├── UI/
-│   │   └── CustomFrame.luau
-│   ├── Tools/
-│   │   └── ToolFramework.luau
-│   ├── Services/
-│   │   ├── Inventory.luau
-│   │   └── Pickup.luau
-│   └── Themes/
-│       └── ThemeManager.luau
-│
-├── src/
-│   ├── ServerScriptService/
-│   │   └── Main.server.luau
-│   ├── StarterPlayer/
-│   │   └── StarterPlayerScripts/
-│   │       └── Inventory.client.luau
-│   ├── ReplicatedStorage/
-│   │   ├── Modules/
-│   │   └── Remotes/
-│   └── StarterGui/
-│
-├── assets/
-│   ├── logo.png
-│   ├── banner.png
-│   └── icons/
-│
-├── release/
-├── docs/
-├── default.project.json
-├── rojo.json
-├── wally.toml
-└── README.md
-```
 
 ---
 
@@ -156,11 +113,6 @@ rojo build default.project.json -o release/AyoChip.rbxm
 
 ---
 
-## Build for all platforms
-
-- Windows → `AyoChip-Windows.zip`
-- Linux → `AyoChip-Linux.zip`
-- macOS → `AyoChip-MacOS.zip`
 
 ---
 
@@ -215,15 +167,7 @@ Notify:Send("AyoChip Loaded!")
 
 ---
 
-# 📦 Releases
 
-```text
-release/
-├── AyoChip.rbxm
-├── AyoChip-Windows.zip
-├── AyoChip-Linux.zip
-└── AyoChip-MacOS.zip
-```
 
 ---
 

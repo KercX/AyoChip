@@ -1,72 +1,154 @@
-# AyoChip Framework
+<p align="center">
+	<img src="assets/banner.png" width="900">
+</p>
 
-Modern Roblox framework with custom UI, tools, inventory systems, notifications and modular game systems.
+<h1 align="center">AyoChip Framework</h1>
+
+<p align="center">
+Modern Roblox Framework • Custom UI • Tools System • Inventory • Pickup • Modular Architecture
+</p>
+
+<p align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Roblox-red)
+![Luau](https://img.shields.io/badge/language-Luau-blueviolet)
+
+</p>
 
 ---
 
-# Features
+# 🚀 About AyoChip
 
-- CustomFrame UI
-- Inventory System
-- Pickup System
-- Notification System
-- Theme Manager
-- Tool Framework
-- Tween Animations
-- Mobile Support
-- Rojo Support
-- Wally Support
-- RBXM Export
+**AyoChip** is a modern Roblox framework built for developers who want:
+- clean modular systems
+- custom UI framework
+- inventory & pickup systems
+- tool registration system
+- scalable architecture for big games
 
+It is designed to replace messy single-script Roblox projects with a structured framework.
 
 ---
 
-# Screenshots
+# ⚙️ Features
 
-Add screenshots inside:
+## 🎨 UI System (CustomFrame)
+- Rounded modern UI
+- UIStroke glow effects
+- Tween animations
+- Theme support
+- Mobile-friendly scaling
+- Reusable frame creation
+
+## 🎒 Inventory System
+- Slot-based inventory
+- Item stacking support
+- Player data storage ready
+
+## 🧲 Pickup System
+- ProximityPrompt based pickup
+- Automatic item handling
+- Server-safe structure
+
+## 🧠 Tool Framework
+- Register custom tools
+- Run tools dynamically
+- Modular system design
+
+## 🔔 Notifications
+- Simple notify system
+- Roblox native UI alerts
+
+## 🎭 Theme System
+- Dark theme default
+- Accent color system
+- Easy customization
+
+---
+
+# 📁 Project Structure
 
 ```text
-assets/screenshots/
+AyoChip/
+│
+├── framework/
+│   ├── Core/
+│   ├── UI/
+│   │   └── CustomFrame.luau
+│   ├── Tools/
+│   │   └── ToolFramework.luau
+│   ├── Services/
+│   │   ├── Inventory.luau
+│   │   └── Pickup.luau
+│   └── Themes/
+│       └── ThemeManager.luau
+│
+├── src/
+│   ├── ServerScriptService/
+│   │   └── Main.server.luau
+│   ├── StarterPlayer/
+│   │   └── StarterPlayerScripts/
+│   │       └── Inventory.client.luau
+│   ├── ReplicatedStorage/
+│   │   ├── Modules/
+│   │   └── Remotes/
+│   └── StarterGui/
+│
+├── assets/
+│   ├── logo.png
+│   ├── banner.png
+│   └── icons/
+│
+├── release/
+├── docs/
+├── default.project.json
+├── rojo.json
+├── wally.toml
+└── README.md
 ```
 
 ---
 
-# Installation
+# 📦 Installation
 
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOURNAME/AyoChipFramework.git
+git clone https://github.com/YOURNAME/AyoChip.git
 ```
 
 ---
 
-## 2. Install Tools
+## 2. Install Dependencies
 
-### Install Rojo
-
-Visit:
-
+### Rojo
 https://github.com/rojo-rbx/rojo
 
-### Install Wally
-
-Visit:
-
+### Wally
 https://github.com/UpliftGames/wally
 
 ---
 
-## 3. Open Project
+## 3. Install Packages
 
-Open folder in:
-
-- Visual Studio Code
-- Roblox Studio
+```bash
+wally install
+```
 
 ---
 
-# Build RBXM
+## 4. Open in Roblox Studio
+
+Open synced project using Rojo plugin.
+
+---
+
+# 🏗️ Build System
+
+## Build RBXM
 
 ```bash
 rojo build default.project.json -o release/AyoChip.rbxm
@@ -74,72 +156,22 @@ rojo build default.project.json -o release/AyoChip.rbxm
 
 ---
 
+## Build for all platforms
 
-
-
----
-
-# Framework Modules
-
-## CustomFrame
-
-Modern rounded UI framework.
-
-Features:
-- UICorner
-- UIStroke
-- Tween animations
-- Theme support
-- Draggable frames
+- Windows → `AyoChip-Windows.zip`
+- Linux → `AyoChip-Linux.zip`
+- macOS → `AyoChip-MacOS.zip`
 
 ---
 
-## ToolFramework
+# 💡 Example Usage
 
-Register and run custom tools.
-
-Example:
-
-```lua
-ToolFramework:Register("Inventory", function()
-	print("Inventory Tool Loaded")
-end)
-```
-
----
-
-## Notification System
-
-Create notifications easily.
-
-Example:
-
-```lua
-Notify:Send("AyoChip Loaded")
-```
-
----
-
-## Theme Manager
-
-Manage colors and themes.
-
-Example:
-
-```lua
-ThemeManager:GetColor("Accent")
-```
-
----
-
-# Example Usage
+## Create UI Frame
 
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local CustomFrame = require(
-	ReplicatedStorage.Modules.CustomFrame
-)
+local CustomFrame = require(ReplicatedStorage.Modules.CustomFrame)
 
 local frame = CustomFrame:Create(
 	game.Players.LocalPlayer.PlayerGui,
@@ -149,54 +181,101 @@ local frame = CustomFrame:Create(
 
 ---
 
+## Register Tool
 
----
----
+```lua
+local ToolFramework = require(ReplicatedStorage.Modules.ToolFramework)
 
-# Recommended VS Code Extensions
+ToolFramework:Register("Inventory", function()
+	print("Inventory opened")
+end)
 
-- Rojo
-- Roblox LSP
-- Lua Language Server
-- Material Icon Theme
-
----
-
-# GitHub Topics
-
-```text
-roblox
-lua
-luau
-framework
-rbxm
-inventory-system
-pickup-system
-custom-ui
+ToolFramework:Run("Inventory")
 ```
 
 ---
 
-# Roadmap
+## Send Notification
 
-- Inventory UI
-- Brainrot System
-- Fuse Machine
-- Save Data
-- Crates
-- Trade System
-- TopbarPlus Support
-- Admin Framework
-- Animation Engine
+```lua
+local Notify = require(ReplicatedStorage.Modules.Notify)
+
+Notify:Send("AyoChip Loaded!")
+```
 
 ---
 
-# License
+# 🎮 Supported Platforms
 
-MIT License
+| Platform | Status |
+|----------|--------|
+| Windows  | ✅ |
+| Linux    | ✅ |
+| macOS    | ✅ |
 
 ---
 
-# Credits
+# 📦 Releases
 
-Created with AyoChip Framework.
+```text
+release/
+├── AyoChip.rbxm
+├── AyoChip-Windows.zip
+├── AyoChip-Linux.zip
+└── AyoChip-MacOS.zip
+```
+
+---
+
+# 🧠 Roadmap
+
+- [ ] Save Data System
+- [ ] Trade System
+- [ ] Crates / Lootboxes
+- [ ] Animation Engine
+- [ ] TopbarPlus Integration
+- [ ] Admin Panel
+- [ ] Shop System
+- [ ] Multiplayer UI Sync
+
+---
+
+# 🧩 Dependencies
+
+- Rojo
+- Wally
+- Signal
+- Promise
+- Roblox Studio
+
+---
+
+# 🎨 UI Style
+
+- Dark modern theme
+- Blue neon accent (#00AAFF)
+- Rounded corners (16px)
+- Smooth animations
+- Minimal design
+
+---
+
+# 📜 License
+
+MIT License © AyoChip
+
+---
+
+# ⭐ Credits
+
+Made with ❤️ by AyoChip Framework
+
+---
+
+# 📢 Notes
+
+This framework is made for:
+- Roblox developers
+- UI systems
+- modular game architecture
+- scalable multiplayer games

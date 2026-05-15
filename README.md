@@ -174,11 +174,8 @@ Notify:Send("AyoChip Loaded!")
 # 🧠 Roadmap
 
 - [ ] Save Data System
-- [ ] Trade System
-- [ ] Crates / Lootboxes
 - [ ] Animation Engine
 - [ ] TopbarPlus Integration
-- [ ] Admin Panel
 - [ ] Shop System
 - [ ] Multiplayer UI Sync
 

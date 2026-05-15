@@ -212,7 +212,7 @@ MIT License © AyoChip
 
 # ⭐ Credits
 
-Made with ❤️ by AyoChip Framework
+Made with ❤️ by KercX
 
 ---
 

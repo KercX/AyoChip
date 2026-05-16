@@ -1,0 +1,16 @@
+[package]
+name = "kercx/ayochip"
+description = "AyoChip Roblox framework by KercX"
+version = "1.0.0"
+license = "MIT"
+authors = ["KercX"]
+
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+Promise = "evaera/promise@4.0.0"
+Signal = "sleitnick/signal@2.0.1"
+Maid = "quenty/maid@2.0.1"
+Janitor = "howmanysmall/janitor@1.15.1"
+Trove = "sleitnick/trove@1.2.0"
